@@ -37,7 +37,7 @@ if(target.length){
 const projetos = [
     {
     titulo: 'Jogo da Cobrinha',
-    img:'/img/cobrinha.png',
+    img:'img/cobrinha.png',
     code: 'https://github.com/sarahmontalvao/jogoDaCobrinha/blob/main/js/snake.js',
     site:'https://sarahmontalvao.github.io/jogoDaCobrinha',
 
@@ -45,7 +45,7 @@ const projetos = [
 
 {
     titulo: 'Lista de tarefas',
-    img:'/img/lista.png',
+    img:'img/lista.png',
     code: 'https://github.com/sarahmontalvao/lista-de-tarefas/blob/main/js/controle.js',
     site:'https://sarahmontalvao.github.io/lista-de-tarefas/',
 
@@ -53,7 +53,7 @@ const projetos = [
 
 {
     titulo: 'Mata Mosquito',
-    img:'/img/mosquito.png',
+    img:'img/mosquito.png',
     code: 'https://github.com/sarahmontalvao/mata-mosquito-game/blob/main/app.js',
     site:'https://sarahmontalvao.github.io/mata-mosquito-game/',
 
@@ -61,7 +61,7 @@ const projetos = [
 
 {
     titulo: 'Relogio',
-    img:'/img/relogio.png',
+    img:'img/relogio.png',
     code: 'https://github.com/sarahmontalvao/relogio/blob/main/js/script.js',
     site:'https://sarahmontalvao.github.io/relogio/',
 
