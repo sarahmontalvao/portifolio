@@ -1,0 +1,172 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #0D0106;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#header{
+    height: 5em;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 6;
+    
+    
+   
+    
+}
+
+#logo img{
+    height: 4em;
+}
+
+#header nav a{
+    color: beige;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 15px;
+    border-radius: 20px;
+   
+}
+
+#header nav a:hover{
+    background-color: #805971;
+}
+
+#profile{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.descricao{
+    color: #ffffff;
+    font-size: 5em;
+}
+
+.descricao a {
+    color: #ffffff;
+    font-size: 0.8em;
+}
+
+.descricao i {
+    font-size: 0.7em;
+    width: 50px;
+}
+
+.descricao i:hover {
+    font-size: 1em;
+}
+
+.cor:hover{
+    color: #FF9F1C;
+}
+
+.titulo{
+    color: #ffffff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 4em;
+}
+
+#sobreMim{
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    
+}
+#sobreMim img:hover{
+    transform: rotateZ(180deg);
+}
+
+.sobreMimParagrafo{
+    font-size: 1.4em;
+    width: 50%;
+    line-height: 2.4em;
+}
+
+#projetos{
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.project{
+    min-height: 500px;
+    border: 2px solid #805971;
+    padding-left: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 5em;
+    position: re;
+}
+
+
+.project i{
+   font-size: 3em;
+}
+
+.imgProject{
+width:50%;
+height: 100%;
+border: 2px solid #805971;
+}
+
+
+.button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    color: #FF9F1C;
+    font-size: 0.3em;
+    background-color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+background-color: #FF9F1C;
+color: #ffffff;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: .3s;
+    transform: translate3d(-30px, 0px, 0px);
+    
+}
+
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    
+}
+ 
+.imgProject img{
+    height: 100%;
+    width: 100%;
+   
+}
