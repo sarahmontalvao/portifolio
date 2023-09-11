@@ -80,6 +80,9 @@ projetos.forEach((projeto) => {
     const projectDiv = document.createElement('div');
     projectDiv.classList.add('project');
 
+    const button = document.createElement('div');
+    button.classList.add('buttonDiv');
+
     
     const site = document.createElement('a');
     site.classList.add('button');
@@ -101,11 +104,33 @@ projetos.forEach((projeto) => {
     const img = document.createElement('img')
     img.src = projeto.img;
     
-    projectDiv.appendChild(site);
-    projectDiv.appendChild(code);
+   
+    projectDiv.appendChild(button);
+    button.appendChild(site);
+    button.appendChild(code);
     projectDiv.appendChild(imgDiv);
-    
     imgDiv.appendChild(img)
+    
+    
+    
 
     container.appendChild(projectDiv);
+});
+
+
+const hamburguer = document.querySelector(".hamburguer");
+
+const nav = document.querySelector(".nav");
+
+const links = document.querySelectorAll(".nav a");
+
+hamburguer.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+// Adicione um evento de clique a cada link
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active"); 
+  });
 });
