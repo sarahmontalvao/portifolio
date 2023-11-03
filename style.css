@@ -10,6 +10,7 @@
 body{
     font-family: 'Rajdhani', sans-serif;
     background-color: #0D0106;
+    
 }
 
 body::-webkit-scrollbar {
@@ -143,8 +144,22 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: space-around;
     color: #ffffff;
+    animation: show ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
 }
 
+.tecnoDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tecnoDiv p{
+   font-size: 3rem;
+   text-transform: uppercase;
+   font-weight: bold;
+}
 #tecnologia i{
     font-size: 13em;
     transform-origin: center ; 
@@ -162,6 +177,9 @@ body::-webkit-scrollbar {
    align-items: center;
    justify-content: center;
    font-size: 4em;
+   animation: show ease-in-out;
+   animation-timeline: view();
+   animation-range: cover 0% cover 30%;
 }
 
 #sobreMim{
@@ -171,6 +189,9 @@ body::-webkit-scrollbar {
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    animation: show ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
     
 }
 #sobreMim img:hover{
@@ -200,7 +221,16 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: space-between;
     font-size: 5em;
+    animation: show ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
   
+}
+
+.tituloProjeto{
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
 }
 
 .imgProject{
@@ -241,18 +271,6 @@ background-color: #FF9F1C;
 color: #ffffff;
 }
 
-[data-anime]{
-    opacity: 0;
-    transition: .3s;
-    transform: translate3d(-30px, 0px, 0px);
-    
-}
-
-[data-anime].animate{
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-    
-}
  
 .imgProject img{
     height: 100%;
@@ -260,11 +278,31 @@ color: #ffffff;
     object-fit: cover;
    
 }
+.tecnoProjeto{
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
 
+.desc{
+    background-color: #80597176;
+    color: #fff;
+    height: 100%;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10% ;
+}
 #footer{
     height: 50vh;
     background-color: rgba(67, 25, 42, 0.315);
     position: relative;
+    animation: show ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
     
 }
 
@@ -273,6 +311,7 @@ color: #ffffff;
     height: 100%;
     align-items: center;
     justify-content: space-around;
+    
    
 }
 .footerTitulo{
@@ -307,6 +346,18 @@ color: #ffffff;
 }
 
 
+@keyframes show {
+    from{
+        opacity: 0;
+        translate: -100px;
+    }
+    to{
+        opacity: 1;
+        translate: 0px;
+    }
+}
+
+
 
 @media (max-width: 1100px) {
     .descricao {
@@ -322,6 +373,9 @@ color: #ffffff;
 
     .project{
         height: 300px;
+    }
+    .tituloProjeto{
+        font-size: 3rem;
     }
   }
 
@@ -400,7 +454,22 @@ color: #ffffff;
     #sobreMim img{
        height: 18em;
     }
+
+    #tecnologia{
+        flex-direction: column;
+        height: 100%;
+        padding: 05% 0;
+        gap: 3rem;
+       }
+       #tecnologia i{
+        font-size: 5em;
+       }
   }
+
+  .tecnoDiv p{
+    font-size: 1.5rem;
+    
+ }
 
   @media (max-width: 675px) {
     #header{
@@ -424,13 +493,11 @@ color: #ffffff;
     height: 18em;
    }
 
-   #tecnologia{
-    flex-direction: column;
+   .descricao{
+    text-align: center;
+    width: 100%;
    }
 
-   #tecnologia i{
-    font-size: 5em;
-   }
    #sobreMim{
     flex-wrap: wrap;
     
@@ -440,7 +507,7 @@ color: #ffffff;
    .project{
     flex-wrap: wrap-reverse;
     justify-content: center;
-    height: 350px;
+    height: 550px;
    }
    .imgProject{
     width: 80vw;
@@ -449,7 +516,7 @@ color: #ffffff;
     }
     .buttonDiv{
         width: 100vw;
-        height: 130px;
+        height: 50%;
        
     }
 .footerTitulo{
