@@ -19,6 +19,14 @@ const projetos = [
 },
 
 {
+  titulo: 'Landing Page saudável',
+  img:'img/dieta.png',
+  site:'https://sarahmontalvao.000.pe/',
+  tecno: 'Wordpress, Elementor',
+  desc: ' Desenvolvi esta Landing Page cativante usando o Elementor no WordPress. Com um design intuitivo e uma chamada irresistível para ação, esta página convida os visitantes a transformar suas vidas com um guia acessível de alimentação saudável.',
+},
+
+{
     titulo: 'Lista de tarefas',
     img:'img/lista.png',
     code: 'https://github.com/sarahmontalvao/lista-de-tarefas/blob/main/js/controle.js',
@@ -114,7 +122,9 @@ projetos.forEach((projeto) => {
     projectDiv.appendChild(button);
     button.appendChild(titulo)
     button.appendChild(site);
-    button.appendChild(code);
+      if (projeto.code) {
+        button.appendChild(code);
+    }
     button.appendChild(tecno);
     projectDiv.appendChild(imgDiv);
     imgDiv.appendChild(img)

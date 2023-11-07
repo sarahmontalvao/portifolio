@@ -50,6 +50,7 @@ body::-webkit-scrollbar {
     font-size: 1.5em;
     padding: 15px;
     border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
    
 }
 
@@ -263,6 +264,7 @@ border: 2px solid #805971;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
    
 }
 
