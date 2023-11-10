@@ -6,7 +6,7 @@ const projetos = [
         code: 'https://github.com/sarahmontalvao/cinema/tree/main/src',
         site:'https://cinema-4gqmy1g17-sarahs-projects-4a16e032.vercel.app/',
         tecno: 'React, Typescript',
-        desc: 'O CineSala é um projeto desenvolvido com React, TypeScript, HTML e CSS, oferecendo aos usuários uma experiência imersiva e fácil de usar para explorar, buscar e favoritar filmes. Sua interface é fluida e responsiva, garantindo uma navegação suave em todas as plataformas.',
+        desc: 'O CineSala é um projeto desenvolvido com React, oferecendo aos usuários uma experiência fácil de usar para explorar, buscar e favoritar filmes. Sua interface é fluida e responsiva.',
     
     },
     {
@@ -15,7 +15,7 @@ const projetos = [
     code: 'https://github.com/sarahmontalvao/jogoDaCobrinha/blob/main/js/snake.js',
     site:'https://sarahmontalvao.github.io/jogoDaCobrinha',
     tecno: 'Html, Css, Javascript',
-    desc: 'O Jogo da Cobrinha em JavaScript é um clássico dos videogames, onde os jogadores controlam uma cobra usando as setas do teclado para se movimentar pelo campo de jogo. A cobra é representada como um array de segmentos coloridos, que aumentam de tamanho ao comer alimentos, também representados por blocos coloridos.',
+    desc: 'A cobra é representada como um array de segmentos coloridos, que aumentam de tamanho ao comer alimentos, também representados por blocos coloridos.',
 },
 
 {
@@ -23,7 +23,7 @@ const projetos = [
   img:'img/dieta.png',
   site:'https://sarahmontalvao.000.pe/',
   tecno: 'Wordpress, Elementor',
-  desc: ' Desenvolvi esta Landing Page cativante usando o Elementor no WordPress. Com um design intuitivo e uma chamada irresistível para ação, esta página convida os visitantes a transformar suas vidas com um guia acessível de alimentação saudável.',
+  desc: ' Desenvolvi esta Landing Page cativante usando o Elementor no WordPress. Esta página convida os visitantes a transformar suas vidas com um guia acessível de alimentação saudável.',
 },
 
 {
@@ -32,7 +32,7 @@ const projetos = [
     code: 'https://github.com/sarahmontalvao/lista-de-tarefas/blob/main/js/controle.js',
     site:'https://sarahmontalvao.github.io/lista-de-tarefas/',
     tecno: 'Html, Css, Javascript',
-    desc: 'A lista de tarefas em JavaScript é uma aplicação simples que permite aos usuários adicionar, marcar como concluídas ou excluir tarefas. Utilizando HTML, CSS e JavaScript, as tarefas são exibidas como itens na página. Os usuários podem adicionar novas tarefas, marcá-las como concluídas com um clique e remover tarefas indesejadas.',
+    desc: 'A lista de tarefas em JavaScript é uma aplicação que permite aos usuários adicionar, marcar como concluídas ou excluir tarefas. Utilizando HTML, CSS e JavaScript.',
 },
 
 {
@@ -41,7 +41,7 @@ const projetos = [
     code: 'https://github.com/sarahmontalvao/mata-mosquito-game/blob/main/app.js',
     site:'https://sarahmontalvao.github.io/mata-mosquito-game/',
     tecno: 'Html, Css, Javascript',
-    desc: 'Neste jogo, mosquitos aparecem aleatoriamente na tela, e os jogadores têm que clicar neles para eliminá-los. Usei setInterval() para definir se o usuario ganhou ou perdeu, proporcionando uma experiência de jogo dinâmica. Além disso, implementei um sistema de seleção de níveis, permitindo aos jogadores escolherem entre diferentes graus de dificuldade para um desafio personalizado.',
+    desc: 'Neste jogo, mosquitos aparecem aleatoriamente na tela, e os jogadores têm que clicar neles para eliminá-los. Conta com seleção de níveis e contagem de tempo. ',
 
 },
 
@@ -61,9 +61,11 @@ const projetos = [
 
 
 
-const container = document.getElementById('projetos');
+const container = document.getElementById('areaProjeto');
 
-projetos.forEach((projeto) => {
+function criarProjetoElemento(projeto) {
+
+
     const projectDiv = document.createElement('div');
     projectDiv.classList.add('project');
 
@@ -130,7 +132,63 @@ projetos.forEach((projeto) => {
     imgDiv.appendChild(img)
 
     container.appendChild(projectDiv);
+    return projectDiv;
+
+
+}
+
+function exibirProjetos(projetos) {
+  projetos.forEach((projeto) => {
+      const unidadeProjetos = criarProjetoElemento(projeto);
+      container.appendChild(unidadeProjetos);
+  });
+}
+
+exibirProjetos(projetos)
+
+
+const pesquisa = document.querySelector('.pesquisa');
+const lupa = document.getElementById('lupa');
+
+function realizarPesquisa(){
+  const textoPesquisa = pesquisa.value.toLowerCase();
+  const resultados = [];
+
+  for (const projeto of projetos) {
+    if (projeto.tecno.toLowerCase().includes(textoPesquisa)) {
+      resultados.push(projeto);
+    }
+  }
+
+
+  if (resultados.length > 0) {
+    container.innerHTML = '';
+    exibirProjetos(resultados)
+
+   
+   
+  } else {
+    container.innerHTML = 'Nenhum projeto encontrado.';
+    container.classList.add('nenhumProjeto')
+  }
+}
+
+pesquisa.addEventListener('keydown', function() {
+ 
+  if (event.keyCode === 13) {
+    realizarPesquisa()
+  }
 });
+
+lupa.addEventListener("click", () => {
+  realizarPesquisa()
+});
+
+
+
+
+
+
 
 
 const hamburguer = document.querySelector(".hamburguer");
