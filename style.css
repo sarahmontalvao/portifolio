@@ -10,6 +10,8 @@
 body{
     font-family: 'Rajdhani', sans-serif;
     background-color: #0D0106;
+    color: #fff;
+    transition: background-color 0.3s linear;
     
 }
 
@@ -34,14 +36,16 @@ body::-webkit-scrollbar {
     justify-content: space-around;
     z-index: 6;
     background-color: #0D0106;
-    
-    
-   
-    
+    transition: background-color 0.3s linear;
 }
 
 #logo img{
     height: 4em;
+}
+
+#header nav{
+  display: flex;
+   
 }
 
 #header nav a{
@@ -58,12 +62,67 @@ body::-webkit-scrollbar {
     background-color: #805971;
 }
 
+.links{
+    display: flex;
+    align-items: center;
+}
+
+.colorContainer{
+    height: 25px;
+    width: 65px;
+    background-color: #ded7e1;
+    border-radius: 130px;
+    position: relative;
+    margin-left: 20px;
+    transition: background-color 0.2s linear;
+}
+
+.colorBall{
+    height: 35px;
+    width: 35px;
+    background-color: #0D0106;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    border: 2px solid #ded7e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    transition: left 0.2s linear;
+    left: 0;
+}
+
+.colorBall.change {
+    left: calc(100% - 35px); 
+    background-color: #805971;
+    color: #FF9F1C;
+}
+
+.colorContainer.change{
+    background-color: #FF9F1C;
+}
+
+#header.change{
+    background-color: #ded7e1;
+    
+}
+
+#header nav.change a {
+    color: #0D0106;
+  }
+  
+
+body.change {
+    background-color: #ded7e1;
+    color: #0D0106;
+}
 .hamburguer{
     position: fixed;
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid #fff ;
+    border-top: 3px solid #FF9F1C ;
     cursor: pointer;
 }
 
@@ -73,7 +132,7 @@ body::-webkit-scrollbar {
     display: block;
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: #FF9F1C;
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
@@ -95,13 +154,13 @@ body::-webkit-scrollbar {
 }
 
 .descricao{
-    color: #ffffff;
+   
     font-size: 5em;
     
 }
 
 .descricao a {
-    color: #ffffff;
+    color:#FF9F1C ;
     font-size: 0.8em;
 }
 
@@ -139,12 +198,12 @@ body::-webkit-scrollbar {
 }
 
 #tecnologia{
-    background-color: rgba(67, 25, 42, 0.315);
+    background-color: #2e11268b;
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: #ffffff;
+   
     animation: show ease-in-out;
     animation-timeline: view();
     animation-range: cover 0% cover 50%;
@@ -185,7 +244,6 @@ body::-webkit-scrollbar {
 
 #sobreMim{
     height: 100vh;
-    color: #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -232,7 +290,6 @@ body::-webkit-scrollbar {
 }
 
 .tituloProjeto{
-    color: #ffffff;
     width: 100%;
     text-align: center;
 }
@@ -261,7 +318,7 @@ border: 2px solid #805971;
     border-radius: 30px;
     color: #FF9F1C;
     font-size: 0.5em;
-    background-color: #80597186;
+    background-color: #2e11268b;;
     text-decoration: none;
     display: flex;
     flex-wrap: wrap;
@@ -284,14 +341,13 @@ color: #ffffff;
    
 }
 .tecnoProjeto{
-    color: white;
     font-size: 2rem;
     width: 100%;
     text-align: center;
 }
 
 .desc{
-    background-color: #80597176;
+    background-color: #2e11268b;
     color: #fff;
     height: 100%;
     font-size: 1rem;
@@ -303,7 +359,7 @@ color: #ffffff;
 }
 #footer{
     height: 50vh;
-    background-color: rgba(67, 25, 42, 0.315);
+    background-color:#2e11268b;
     position: relative;
     animation: show ease-in-out;
     animation-timeline: view();
@@ -331,7 +387,7 @@ color: #ffffff;
     width: 100%;
     height: 50px;
     text-align: center;
-    background-color: rgba(67, 25, 42, 0.315);
+    background-color:#2e11268b;
     border: none;
     box-shadow: 0px 0px 10px 3px #fff;
     color: #fff;
@@ -344,15 +400,19 @@ color: #ffffff;
     top: 50%;
     right: 0px;
     transform: translateY(-50%);
-    color: #fff;
     font-size: 1.5em;
-    background-color: #805971;
+    background-color:#2e11268b;
     padding: 14px;
     cursor: pointer;
+    color: #ded7e1;
+    border: 2px solid #ded7e1;
 }
 
+.pesquisa::placeholder {
+    color: #ded7e1; 
+  }
+
 .nenhumProjeto{
-    color: white;
     font-size: 2em;
     min-height: 50vh;
     max-width: 100vw;
@@ -449,6 +509,9 @@ color: #ffffff;
         pointer-events: none;
        
     }
+    #header nav.change a {
+        color: #ded7e1;
+      }
 
     .nav.active .links{
         clip-path:circle(1500px at 90% -15%) ;

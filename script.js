@@ -206,3 +206,34 @@ links.forEach((link) => {
     nav.classList.remove("active"); 
   });
 });
+
+document.querySelector('.colorContainer').addEventListener('click', function() {
+  var colorBall = document.querySelector('.colorBall');
+  colorBall.classList.toggle('change');
+
+  var colorContainer = document.querySelector('.colorContainer')
+  colorContainer.classList.toggle('change');
+
+  document.body.classList.toggle('change');
+  var header = document.getElementById('header');
+  header.classList.toggle('change');
+
+  var nav = document.querySelector('nav');
+  nav.classList.toggle('change');
+
+  var icon = document.querySelector('.colorBall i');
+
+  if (document.body.classList.contains('change')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  } else {
+   
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+  if (nav.classList.contains("active")) {
+    
+    nav.classList.remove("active");
+  }
+});
+
