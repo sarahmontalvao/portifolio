@@ -5,7 +5,7 @@ const projetos = [
         img:'img/cinema.png',
         code: 'https://github.com/sarahmontalvao/cinema/tree/main/src',
         site:'https://cinema-4gqmy1g17-sarahs-projects-4a16e032.vercel.app/',
-        tecno: 'React, Typescript',
+        tecno: 'React, Typescript, css',
         desc: 'O CineSala é um projeto desenvolvido com React, oferecendo aos usuários uma experiência fácil de usar para explorar, buscar e favoritar filmes. Sua interface é fluida e responsiva.',
     
     },
@@ -16,6 +16,14 @@ const projetos = [
     site:'https://sarahmontalvao.github.io/jogoDaCobrinha',
     tecno: 'Html, Css, Javascript',
     desc: 'A cobra é representada como um array de segmentos coloridos, que aumentam de tamanho ao comer alimentos, também representados por blocos coloridos.',
+},
+{
+  titulo: 'Quiz',
+  img:'img/quiz.png',
+  code: 'https://github.com/sarahmontalvao/quiz/tree/main/src',
+  site:'https://quiz-dbwynq5ti-sarahs-projects-4a16e032.vercel.app/',
+  tecno: 'React, Css',
+  desc: 'Perguntas de múltipla são respondidas e devolvidas com feedback instantâneo. No fim, é mostrada a pontuação ',
 },
 
 {
