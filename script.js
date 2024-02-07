@@ -1,5 +1,7 @@
 const projetos = [
 
+      
+
     {
         titulo: 'CineSala',
         img:'img/cinema.png',
@@ -21,18 +23,11 @@ const projetos = [
   titulo: 'Quiz',
   img:'img/quiz.png',
   code: 'https://github.com/sarahmontalvao/quiz/tree/main/src',
-  site:'https://quiz-dbwynq5ti-sarahs-projects-4a16e032.vercel.app/',
+  site:'https://quiz-ashen-nu.vercel.app/',
   tecno: 'React, Css',
   desc: 'Perguntas de múltipla são respondidas e devolvidas com feedback instantâneo. No fim, é mostrada a pontuação ',
 },
 
-{
-  titulo: 'Landing Page saudável',
-  img:'img/dieta.png',
-  site:'https://sarahmontalvao.000.pe/',
-  tecno: 'Wordpress, Elementor',
-  desc: ' Desenvolvi esta Landing Page cativante usando o Elementor no WordPress. Esta página convida os visitantes a transformar suas vidas com um guia acessível de alimentação saudável.',
-},
 
 {
     titulo: 'Lista de tarefas',
